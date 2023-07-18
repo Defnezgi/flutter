@@ -10,7 +10,7 @@ class SignUpApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         '/': (context) => const SignUpScreen(),
-        '/welcome': (context) => const WelcomeScreen(),
+        '/giris': (context) => const WelcomeScreen(),
       },
     );
   }
@@ -43,7 +43,7 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child:
-            Text('Welcome!', style: Theme.of(context).textTheme.displayMedium),
+            Text('Hoş Geldiniz!', style: Theme.of(context).textTheme.displayMedium),
       ),
     );
   }
@@ -81,7 +81,7 @@ class _SignUpFormState extends State<SignUpForm> {
   }
 
   void _showWelcomeScreen() {
-    Navigator.of(context).pushNamed('/welcome');
+    Navigator.of(context).pushNamed('/giris');
   }
 
   @override
@@ -130,7 +130,7 @@ class _SignUpFormState extends State<SignUpForm> {
               }),
             ),
             onPressed: _formProgress == 1 ? _showWelcomeScreen : null,
-            child: const Text('Sign up'),
+            child: const Text('Giris'),
           ),
         ],
       ),
